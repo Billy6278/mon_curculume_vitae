@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header h1{
+    width: 100%;
+    height: 50px;
+    background: gray;
+    text-align: center;
+    font-size: 40px;
+    color: blue;
+}
+
+h2{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-top: 50vh;
+    /* font-weight: bold; */
+}
+
+
+
+
+
+/* le pied de la page commence ici */
+  footer {  /* footer c'est le pied ma page */
+    background-color: grey;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    
+  }
+  footer p { /* c'est la paragraphe de pied de page  */
+    height: 30px;
+    font-size: 12px;
+    position: relative;
+    top: 9px;
+    text-transform: uppercase; /* mettre en tous le texe en majuscule */
+    text-shadow: 2px 2px 8px black;
+  }

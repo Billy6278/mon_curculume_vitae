@@ -1,0 +1,389 @@
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  /* body{
+    
+  } */
+  body::selection{
+    background-color: grey;
+  }
+  /* La header c'est en tête comme suite */
+  header{
+    background-color: grey;
+    height: 73px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  header h1{
+    font-size: 45px;
+    text-shadow: 2px 2px 7px black;
+  }
+  header h2{
+    font-size: 15px;
+    text-shadow: 2px 2px 7px black;
+  }
+
+  /* La partie nav c'est la collone qui est en bas header il contient des liens */
+
+  nav{
+    background-color: rgba(160, 153, 153, 0.87);
+    height: 33px;
+    text-align: center;
+    /*position: sticky;  permet que les boutons soit en fixé en haut de la page */
+    top: 0; /* la limite de position */
+  }
+  nav li{
+    display: inline-block; /* pour centrer boutons */
+    padding: 8px 30px 0 0; /*espacement des boutons */
+
+  }
+
+  nav a{
+    position: sticky;
+    text-decoration: none; /* enléver le soulignement des liens */
+    background-color: gray;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 2px black;
+
+  }
+  nav a:hover{
+    color: white;
+    box-shadow: 2px 2px 2px black;
+  }
+
+  .encadrement{
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* il seras fractionner combien de colunne  */
+    width: 80%;
+    width: 900px;
+    margin: auto;
+    gap: 20px;
+  }
+  /* ici c'est le traitement de footer c'est-a-dire le pied de page */
+  /*
+   .encadrement aside{
+    border: 2px dotted grey;
+    height: 1000px; 
+  }  
+  */
+    /* C'est la partie de traitement de l'image  */
+  .encadrement aside img{
+    height: 200px;
+    width: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 2px 2px 5px black;
+    
+  }
+  .titre, h3 {
+    background-color: grey;
+    color: white;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px black;
+    margin: 10px 8px 8px 8px;
+  }
+
+  .encadrement aside ul {   /* c'est la partie des traitement des information */
+    list-style-type: none;
+    text-align: left;
+    /* margin: 10px 8px 8px 15px; */
+    margin: 0px 10px; 
+    line-height: 25px;
+  }
+  .encadrement aside ul .min{
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .loisir p{ 
+    font-size: 15px;
+    text-align: left;
+    padding-left: 8px;
+    margin-top: 10px;
+
+  }
+  progress {
+    width: 90%;
+    height: 15px;
+    border: 1px solid white;
+    box-shadow: 2px 2px 5px black;
+  }
+  span {
+    font-weight: bold;
+  }
+
+  .encadrement section {
+    /* la partie à droite la page qui contient des information comme a propos de moi  */
+    /* border: 2px dotted grey; */
+    width: 100%;
+  }
+  .encadrement section li {
+    margin-left: 30px;
+  }
+  .encadrement section{
+    font-size: 15x;
+  }
+  .encadrement section p{
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 15px;
+    
+  }
+
+  /* c'est la partie des traitément de l'image de mes competances  */
+  section img {
+    height: 150px;
+    width: 150px;
+    bottom: 10px;
+  } 
+  .competant {     /* c'est l'alignement des images */
+    display: flex;
+    text-align: center;
+  }
+
+  /* a recherse */
+  .competant img{
+    /* width: 50%; */
+    -webkit-filter: grayscale(0%); /* Prènne la couleur grayscale */
+    filter: grayscale(0%); /* Prènne la couleur grayscale */
+    box-shadow: 1px 1px 5px black;
+  }
+  .competant img:hover{ /* Si ont l'envoie le cursieur l'image les images prennes la couleur de souhautez  */
+    -webkit-filter: grayscale(100%); /* Prènne la couleur grayscale */
+    filter: grayscale(100%); /* Prènne la couleur grayscale */
+    box-shadow: 1px 1px 10px black;
+  }
+/* fin a recherser */
+
+  section .image p {
+    text-align: center;
+    /* word-spacing: 5px; espacement entre les mots  */
+    font-size: 16px;
+    padding: 10px;
+  }
+  /* le pied de la page commence ici */
+  footer {  /* footer c'est le pied ma page */
+    background-color: grey;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    
+  }
+  footer p { /* c'est la paragraphe de pied de page  */
+    height: 30px;
+    font-size: 12px;
+    position: relative;
+    top: 9px;
+    text-transform: uppercase; /* mettre en tous le texe en majuscule */
+    text-shadow: 2px 2px 8px black;
+  }
+
+
+  /* La page des projets commence ici  */
+  .projet {
+    display: flex; /* mettre tous les images en ligne */
+    flex-wrap: wrap; /* renvoier les images s'il ya plus espace maintennat en ligne */
+    justify-content: space-between; /* il justifier les image et ocupe les espacement entre les images */
+    text-align: center;
+  }
+  .projet .imagek p{
+    text-align: center;
+  }
+
+  .projet .imagek{
+    flex-basis: 50%; /* C'est de partager la section en deux partie 50% à chaqeu partie  */
+  }
+  .imagek img{
+    width: 50%;
+    -webkit-filter: grayscale(0%); /* Prènne la couleur grayscale */
+    filter: grayscale(0%); /* Prènne la couleur grayscale */
+    box-shadow: 1px 1px 5px black;
+  }
+  .imagek img:hover{ /* Si ont l'envoie le cursieur l'image les images prennes la couleur de souhautez  */
+    -webkit-filter: grayscale(100%); /* Prènne la couleur grayscale */
+    filter: grayscale(100%); /* Prènne la couleur grayscale */
+    box-shadow: 1px 1px 10px black;
+  }
+  /* Fin de la page de mes projets */
+
+  /* La page de cv commence ici */
+  .mon_cv .contenaire_cv {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 25px 0px;
+  }
+  .mon_cv .date p{
+    color: grey;
+    font-size: 12px;
+  }
+  .mon_cv .exper p{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  #certif{
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* La page de cv prend fin d'ici  */
+
+
+  /* la page de contact commence d'ici */
+  .contact {
+    font-size: 15px;
+    padding: 30px;
+  }
+  input, textarea{
+    display: block;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+  }
+  textarea{
+    height: 200px;
+    resize: none;
+  }
+  label{
+    font-weight: bold;
+  } 
+  input[type="submit"]{
+    /* position: relative; */
+    height: 40px;
+    width: 150px;
+    margin:auto
+  }
+  .passe{
+    position: relative;
+    width: 200px;
+  }
+  .passe input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 15px;
+  }
+  .oiel{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  /* c'est le traintement de menu hamburger commence ici */
+  .hamburger {
+    position: fixed;
+    z-index: 1000px;
+    top: 2px;
+    right: 2px;
+    width: 30px;
+    cursor: pointer;
+    margin: 15px;
+    /* background: none;
+    background-color: transparent; */
+  }
+  .hamburger span {
+    /* background: none; */
+    display: block;
+    height: 4px;
+    background: black;  /* Couleure de menu */
+    margin: 6px 0;
+    border-radius: 5px;
+    transition: 0.4s;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -250px;      /* Caché à gauche */
+    width: 250px;
+    height: 100%;
+    background: transparent; /* Couleur de font de menu */
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s;
+  }
+  .menu a {
+    color: black;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .menu a:hover {
+    background: blueviolet; /* Couleur si ont clique */
+  }
+  /* --- QUAND LE MENU EST OUVERT --- */
+   body.open .menu {
+    left: 0;        /* Le menu glisse */
+  } 
+  /* Animation du bouton hamburger en croix */
+  body.open .hamburger span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  body.open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  body.open .hamburger span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+ 
+  /* c'est la fin du traintement de menu hamburger */
+
+  @media screen and (max-width: 660px) {
+    header h1{
+      font-size: 30px;
+    }
+    .encadrement{
+      display: grid;
+      grid-template-columns: 1fr; /* il seras fractionner combien de colunne  */
+      max-width: 80%;
+      width: 900px;
+      margin:auto;
+      gap: 10px;
+    }
+    #imgsss{
+      margin: 10 auto;
+      justify-content: center;
+      align-items: baseline;
+      display: flex;
+    }
+    .titre{
+      width: auto;
+      max-width: 88%;
+      justify-content: center;
+    }
+    header h2{
+      font-size: 20px;
+    }
+    header{
+      height: 70px;
+    }
+    /* .encadrement section p{
+      margin: auto;
+    } */
+  }
+
+  @media screen and (max-width: 695px) {
+    .hamburger{
+      top: 0px;
+      right: -7px; 
+      width: 20px;
+    }
+  } 
