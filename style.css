@@ -3,72 +3,78 @@
     padding: 0;
   }
   /* body{
-    
+    Le corps de la page
   } */
-  body::selection{
+  body::selection{   /* c'est la couleur de selection de la page  */
     background-color: grey;
   }
   /* La header c'est en tête comme suite */
-  header{
+  header{         /* c'est les titres de la page  */
     background-color: grey;
-    height: 73px;
+    padding: 10px 0;
+    /* height: 73px; est remplacer par padding */
     width: 100%;
     color: white;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
   }
-  header h1{
+  header h1{          /* c'est le titre 1 de la page  */
     font-size: 45px;
     text-shadow: 2px 2px 7px black;
   }
-  header h2{
+  header h2{            /* c'est le titre 2 de la page  */
     font-size: 15px;
     text-shadow: 2px 2px 7px black;
   }
 
   /* La partie nav c'est la collone qui est en bas header il contient des liens */
 
-  nav{
+  nav{  /* c'est la patie qui contient des liens  */
     background-color: rgba(160, 153, 153, 0.87);
     height: 33px;
     text-align: center;
     /*position: sticky;  permet que les boutons soit en fixé en haut de la page */
     top: 0; /* la limite de position */
   }
-  nav li{
-    display: inline-block; /* pour centrer boutons */
-    padding: 8px 30px 0 0; /*espacement des boutons */
-
+  .resposive ul {     /* c'est les liens de la page  */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /*display: inline-block;  pour centrer boutons */
+    padding: 3px; 
+    margin: 0;
   }
 
-  nav a{
-    position: sticky;
+  .resposive ul li a {
     text-decoration: none; /* enléver le soulignement des liens */
     background-color: gray;
-    font-weight: bold;
+    font-weight: bold;    /* c'est de mettre en gras  */
     color: white;
+    padding: 3px 10px;
     border-radius: 5px;
-    padding: 4px;
+    display: inline-block;
     text-shadow: 1px 1px 3px black;
     box-shadow: 1px 1px 2px black;
-
   }
   nav a:hover{
     color: white;
     box-shadow: 2px 2px 2px black;
   }
 
-  .encadrement{
+  .encadrement {  /* c'est le contenaire de gris  */
     display: grid;
     grid-template-columns: 1fr 3fr; /* il seras fractionner combien de colunne  */
-    width: 80%;
-    width: 900px;
+    width: 100%;
+    max-width: 90%;
+   /* width: 100vh     à revoire  */
+    /* width: 100%; */
     margin: auto;
     gap: 20px;
   }
   /* ici c'est le traitement de footer c'est-a-dire le pied de page */
   /*
-   .encadrement aside{
+  .encadrement aside{  c'est le premier partie de gris.
     border: 2px dotted grey;
     height: 1000px; 
   }  
@@ -81,10 +87,9 @@
     margin-bottom: 15px;
     border-radius: 20px;
     border: 2px solid white;
-    box-shadow: 2px 2px 5px black;
-    
+    box-shadow: 2px 2px 5px black; 
   }
-  .titre, h3 {
+  .titre, h3 {  /* c'est le traitement de titre 2 et il est prend tous les titre de la page  */
     background-color: grey;
     color: white;
     height: 25px;
@@ -96,36 +101,37 @@
     margin: 10px 8px 8px 8px;
   }
 
-  .encadrement aside ul {   /* c'est la partie des traitement des information */
-    list-style-type: none;
+  .encadrement aside ul {       /* c'est la partie des traitement des information */
+    list-style-type: none;      /* c'est de enlever les puces derieur les ligne  */
     text-align: left;
     /* margin: 10px 8px 8px 15px; */
     margin: 0px 10px; 
     line-height: 25px;
   }
-  .encadrement aside ul .min{
+  .encadrement aside ul .min{     /* c'est le traitement de mon emil comme il est long  */
     font-size: 10px;
     font-weight: bold;
   }
 
-  .loisir p{ 
+  .loisir p{      /* c'est la partie qui determine mes qualité en poucentage %  */
     font-size: 15px;
     text-align: left;
     padding-left: 8px;
     margin-top: 10px;
 
   }
-  progress {
+  progress {          /* c'est la balise progress qui valide le poucentage ont donne  */
     width: 90%;
     height: 15px;
     border: 1px solid white;
     box-shadow: 2px 2px 5px black;
+    padding-left: 5px;
   }
   span {
     font-weight: bold;
   }
 
-  .encadrement section {
+  .encadrement section { /* c'est le deuxieme partie de gris  */
     /* la partie à droite la page qui contient des information comme a propos de moi  */
     /* border: 2px dotted grey; */
     width: 100%;
@@ -136,15 +142,13 @@
   .encadrement section{
     font-size: 15x;
   }
-  .encadrement section p{
+  .encadrement section p{       /* c'est les paragraphes deuxiemes gris  */
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
-    margin: 15px;
-    
+    margin: 15px; 
   }
-
-  /* c'est la partie des traitément de l'image de mes competances  */
-  section img {
+  
+  section img { /* c'est le traitément des l'images de mes competances  */
     height: 150px;
     width: 150px;
     bottom: 10px;
@@ -153,22 +157,20 @@
     display: flex;
     text-align: center;
   }
-
-  /* a recherse */
-  .competant img{
+ 
+  .competant img{        /* c'est le traitément de l'image de mes compétant si le cursieur passe il prend une couleur */
     /* width: 50%; */
-    -webkit-filter: grayscale(0%); /* Prènne la couleur grayscale */
-    filter: grayscale(0%); /* Prènne la couleur grayscale */
+    -webkit-filter: grayscale(0%); /* Prenne la couleur grayscale */
+    filter: grayscale(0%); /* Prenne la couleur grayscale */
     box-shadow: 1px 1px 5px black;
   }
-  .competant img:hover{ /* Si ont l'envoie le cursieur l'image les images prennes la couleur de souhautez  */
-    -webkit-filter: grayscale(100%); /* Prènne la couleur grayscale */
-    filter: grayscale(100%); /* Prènne la couleur grayscale */
+  .competant img:hover{ /* Si ont pointer sur une l'image, l'images prennes la couleur souhautez  */
+    -webkit-filter: grayscale(100%); /* Prenne la couleur grayscale */
+    filter: grayscale(100%); /* Prenne la couleur grayscale */
     box-shadow: 1px 1px 10px black;
   }
-/* fin a recherser */
 
-  section .image p {
+  section .image p {       /* les paragraphes de l'image */
     text-align: center;
     /* word-spacing: 5px; espacement entre les mots  */
     font-size: 16px;
@@ -179,34 +181,33 @@
     background-color: grey;
     color: white;
     text-align: center;
+    height: 25px;
     margin-top: 20px;
-    
+    max-width: 100%; 
   }
   footer p { /* c'est la paragraphe de pied de page  */
-    height: 30px;
+    /* height: 30px; */
     font-size: 12px;
     position: relative;
-    top: 9px;
-    text-transform: uppercase; /* mettre en tous le texe en majuscule */
+    top: 5px; 
+    text-transform: uppercase; /* mettre tous le texe en majuscule */
     text-shadow: 2px 2px 8px black;
   }
-
-
-  /* La page des projets commence ici  */
+  /* La page de mes projets commence ici  */
   .projet {
     display: flex; /* mettre tous les images en ligne */
     flex-wrap: wrap; /* renvoier les images s'il ya plus espace maintennat en ligne */
     justify-content: space-between; /* il justifier les image et ocupe les espacement entre les images */
     text-align: center;
   }
-  .projet .imagek p{
+  .projet .imagek p{      /* les  paragraphe de l'image */
     text-align: center;
   }
 
-  .projet .imagek{
+  .projet .imagek{      /* diveser la partie de section en deux partie  */
     flex-basis: 50%; /* C'est de partager la section en deux partie 50% à chaqeu partie  */
   }
-  .imagek img{
+  .imagek img{       /* traitement des images de projet */
     width: 50%;
     -webkit-filter: grayscale(0%); /* Prènne la couleur grayscale */
     filter: grayscale(0%); /* Prènne la couleur grayscale */
@@ -220,20 +221,20 @@
   /* Fin de la page de mes projets */
 
   /* La page de cv commence ici */
-  .mon_cv .contenaire_cv {
+  .mon_cv .contenaire_cv {        /* le contenaitaire de cv */
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     gap: 25px 0px;
   }
-  .mon_cv .date p{
+  .mon_cv .date p{    /*le paragraphe qui contient les dates de mon cv  */
     color: grey;
     font-size: 12px;
   }
-  .mon_cv .exper p{
+  .mon_cv .exper p{       /* le paragraphe qui contient les renseignements de mon cv  */  
     font-size: 15px;
     font-weight: bold;
   }
-  #certif{
+  #certif{          /*traitement le certificat de mon cv  */
     text-align: center;
     font-weight: bold;
   }
@@ -287,9 +288,9 @@
   /* c'est le traintement de menu hamburger commence ici */
   .hamburger {
     position: fixed;
-    z-index: 1000px;
-    top: 2px;
-    right: 2px;
+    z-index: 1000;
+    top: 10px;
+    right: 10px;
     width: 30px;
     cursor: pointer;
     margin: 15px;
@@ -347,30 +348,35 @@
   /* c'est la fin du traintement de menu hamburger */
 
   @media screen and (max-width: 660px) {
+    header {
+      height: auto;
+      padding: 10px 0;
+    }
     header h1{
-      font-size: 30px;
+      font-size: 25px;
+    }
+    header h2{
+      font-size: 15px;
     }
     .encadrement{
       display: grid;
       grid-template-columns: 1fr; /* il seras fractionner combien de colunne  */
-      max-width: 80%;
-      width: 900px;
-      margin:auto;
-      gap: 10px;
+      width: 100%;
+      max-width: 100%;
+      margin: auto;
+      gap: 15px;
     }
     #imgsss{
-      margin: 10 auto;
-      justify-content: center;
-      align-items: baseline;
+      margin: 10px auto;
       display: flex;
+      justify-content: center;
+      /* align-items: center; */
     }
     .titre{
-      width: auto;
-      max-width: 88%;
-      justify-content: center;
-    }
-    header h2{
-      font-size: 20px;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      /* justify-content: center; */
     }
     header{
       height: 70px;
@@ -379,11 +385,68 @@
       margin: auto;
     } */
   }
+  @media screen and (max-width: 350px) {
+    header h1 {
+    font-size: 20px;
+    }
+
+    header h2 {
+    font-size: 10px;
+    }
+
+    header {
+      max-width: 100vh;
+      height: 27px;
+    }
+
+    .titre, h3 {
+      font-size: 20px;
+      width: 90%;
+    }
+
+    .resposive ul {
+      flex-direction: row; /* mettre les lins en ligne */
+      align-items: center;
+      gap: 10px;
+      
+    }
+    .resposive ul li a {
+      width: 80%;
+      text-align: center;
+      padding: 4px 8px;
+      font-size: 9px;
+      font-weight: bold;
+    }
+
+    progress {
+      text-align: center;
+      padding-left: 5px;
+    }
+
+    .hamburger{
+      top: 0;
+      right: 0; 
+      width: 17px;
+    }
+    footer {
+      height: 20px;
+    }
+    footer .foter{
+      text-align: center; 
+      font-size: 6px;
+    }
+
+    .imagek .projetz{
+      /* text-align: justify; */
+      font-size: 12px;
+    }
+  }
 
   @media screen and (max-width: 695px) {
     .hamburger{
-      top: 0px;
-      right: -7px; 
+      top: 10px;
+      right: 10px; 
       width: 20px;
+     
     }
   } 
