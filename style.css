@@ -436,6 +436,11 @@
       font-size: 6px;
     }
 
+    div .renseignement {
+      color: red;
+      font-size: 5px;
+    }
+
     .imagek .projetz{
       /* text-align: justify; */
       font-size: 12px;
